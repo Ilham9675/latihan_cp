@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.php": "php",
+        "stdio.h": "c",
+        "*.rmd": "markdown",
+        "cmath": "cpp",
+        "iosfwd": "cpp",
+        "initializer_list": "cpp",
+        "valarray": "cpp",
+        "iostream": "cpp",
+        "complex": "cpp",
+        "*.tcc": "cpp"
+    }
+}
