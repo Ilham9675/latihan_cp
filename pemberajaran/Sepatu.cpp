@@ -7,7 +7,7 @@ int main(){
     
     ll n,m,temp,jum = 0;
     cin >> n >> m;
-    ll data1[n],data2[n];
+    ll data1[n],data2[m];
     for(ll i = 0;i < n;i++){
         cin >> data1[i];
     }
@@ -19,7 +19,7 @@ int main(){
     
     ll i = 0,j = 0;
     while(i < n && j < m){
-        if((data1[i] - data2[j] == 1) || (data1[i] == data2[j])){
+        if((data1[i] + 1) - data2[j] == 0 || data1[i] == data2[j]){
             jum++;
             i++;
             j++;
