@@ -26,9 +26,7 @@ int main(){
         }
         hasil[i] = temp;
     }
-    for(int i = 1;i <= m;i++){
-        cout << hasil[i] << endl;
-    }
+    
     cout << hasil[m];
 
 
