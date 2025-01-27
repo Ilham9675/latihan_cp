@@ -14,9 +14,9 @@ int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    int n;
-    cin >> n;
-    for(int i = 0;i < n;i++){
+    // int n;
+    // cin >> n;
+    // for(int i = 0;i < n;i++){
         string S;
         cin >> S;
         int panjang = S.length();
@@ -25,18 +25,28 @@ int main(){
         for(int j = 0;j < panjang;j++){
             nilai[j][j] = 1;
         }
+        int awal = 0;
+        int akhir = 0;
+        int mx = INT_MIN;
         for(int j = 2;j <= panjang;j++){
             for(int k = 0;k < panjang-j+1;k++){
-                int L = k, R= k+j-1;
+                int L = k, R = k+j-1;
                 if(S[L] == S[R]){
                     nilai[L][R] = nilai[L+1][R-1] + 2;
-                }else{
-                    nilai[L][R] = max(nilai[L+1][R],nilai[L][R-1]);
+                    if(nilai[L][R] > mx){
+                        awal = L;
+                        akhir = R;
+                        mx = nilai[L][R];
+                    }
                 }
             }
         }
-        cout << nilai[0][panjang-1] << endl;
-    }
+        for(int i = awal;i <= akhir;i++){
+            cout << S[i];
+        }
+        //cout << endl;
+        //cout << nilai[0][panjang-1] << endl;
+    //}
 
     return 0;
 }
